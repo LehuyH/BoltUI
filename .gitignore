@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Built Files
+/dist/*.wasm
+/dist/main.js
