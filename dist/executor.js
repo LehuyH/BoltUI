@@ -53,9 +53,10 @@ window.buildImage = (imageSrc) => {
 }
 
 //When we hit a \n or endl
+let lastWasNewLine = false;
 window.newLine = () => {
     //Pad text to min width depending on text-align
-    const line = pendingText.map(text=>{
+    let line = pendingText.map(text=>{
         //If text as padding, ensure that the alignment is respected
         if(containerStyles.setW !== null){
             if(containerStyles.setW > text.trim().length){
@@ -75,7 +76,16 @@ window.newLine = () => {
     text.style.whiteSpace = 'pre';
     text.style.margin = '0';
     text.classList.add(globalStyles.font)
-    text.innerText = line;
+    
+	if(line.length > 0) lastWasNewLine = false;
+	else lastWasNewLine = true;
+
+	if(lastWasNewLine && line.length === 0){
+		line = ' ';
+	}
+
+	text.innerText = line;
+
 
     const section = document.createElement('section');
 
