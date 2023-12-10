@@ -37,34 +37,33 @@ BoltUI simplifies the creation of graphical user interfaces (GUIs) in C++ by red
 ## 🚀 Quick Start Example
 
 ```cpp
-#include<iostream>
-#include<iomanip>
 #include "boltui.hpp"
 
 using namespace std;
 
 int main(){
-    UI ui;
-    
-    ui << ui.markdown("# Hello, welcome to the Cat Shop!") << endl;
+  UI ui;
 
-    ui << ui.markdown("## Who do you want to adopt ?") << endl;
-    
-    ui.font("monospace");
-    ui << ui.setw(20) << "Whiskers" << ui.setw(20) <<
-    ui.image("http://placekitten.com/300/200") 
-    << endl;
-    
-    ui << endl << " " << endl << " " << endl;
+  ui << ui.markdown("# Hello, welcome to the Cat Shop!");
 
-    ui << ui.setw(20) << "Meowtastic" << ui.setw(20) <<
-    ui.image("http://placekitten.com/200/200") 
-    << endl;
+  ui << ui.markdown("## Who do you want to adopt ?");
 
-    ui << endl << " " << endl << " " << endl;
-    ui.font("sans");
+  ui.font("monospace");
+  ui << ui.setw(20) << "Whiskers" << ui.setw(20) <<
+  ui.image("http://placekitten.com/300/200") 
+  << endl;
 
-    return 0;
+  ui << endl << endl << endl;
+
+  ui << ui.setw(20) << "Meowtastic" << ui.setw(20) <<
+  ui.image("http://placekitten.com/200/200") 
+  << endl;
+
+  ui << endl << endl << endl;
+  ui.font("sans");
+
+  return 0;
+
 }
 ```
 
