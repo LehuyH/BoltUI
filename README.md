@@ -1,4 +1,5 @@
 #  BoltUI ⚡
+[![Run on Replit](https://replit.com/badge)](https://replit.com/@LehuyH/BoltUI-Starter)
 
 BoltUI simplifies the creation of graphical user interfaces (GUIs) in C++ by redirecting program output to a web-based interface. This package aims to provide a seamless experience for new C++ developers by replacing `iostream` functionalities like `cout` and `cin` with web-based UI components.
 
